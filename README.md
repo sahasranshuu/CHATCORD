@@ -77,19 +77,8 @@ If you want to clear saved data:
 1. Open DevTools → Application/Storage → Local Storage
 2. Remove the keys above (or clear site data)
 
-## Notes / Limitations
 
-- Server-side users and room membership are stored **in memory**, so they reset when the server restarts.
-- Message persistence is **local to your browser** (not shared across devices).
 
-## Troubleshooting
-
-### `EADDRINUSE: address already in use :::3000`
-
-Port **3000** is already being used by another process.
-
-- Stop the other running server (the terminal where it’s running) with `Ctrl + C`, then rerun, **or**
-- Change the port by setting `PORT`:
 
 ```bash
 set PORT=3001 && npm start
